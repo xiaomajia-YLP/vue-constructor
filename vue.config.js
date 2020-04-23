@@ -30,7 +30,7 @@ module.exports = {
       .tap((options) => Object.assign(options, { limit: 10240 }));
   },
   css: {
-    modules: false,
+    requireModuleExtension: true,
     // extract: isPro,
     sourceMap: false,
   },

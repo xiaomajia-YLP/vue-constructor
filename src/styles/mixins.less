@@ -1,0 +1,46 @@
+/* clearfix */
+.clearfix() {
+    zoom: 1;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+        visibility: hidden;
+        font-size: 0;
+        height: 0;
+    }
+}
+
+/* hide scroll bar (ie10+) */
+.hide-scroll-bar() {
+    -ms-overflow-style: none; // ie10+
+    scrollbar-width: none; // firefox
+
+    &::-webkit-scrollbar {
+        // chrome
+        display: none;
+    }
+}
+
+/* set placeholder */
+.placeholder(@color: @input-placeholder-color) {
+    // Firefox
+    &::-moz-placeholder {
+        color: @color;
+        opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+    }
+    // Internet Explorer 10+
+    &:-ms-input-placeholder {
+        color: @color;
+    }
+    // Safari and Chrome
+    &::-webkit-input-placeholder {
+        color: @color;
+    }
+}
+

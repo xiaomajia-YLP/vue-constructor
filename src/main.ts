@@ -3,8 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import { Button } from 'ant-design-vue'
+
 import '@/styles/index.less'
 
+Vue.component(Button.name, Button)
 Vue.config.productionTip = false
 
 new Vue({
